@@ -62,23 +62,25 @@ body {
     overflow-x: hidden;
 }
 
-/* Main */
+
+/* MAIN */
 
 .page {
     width: 100%;
     max-width: 650px;
     min-height: 100vh;
 
-    padding: 115px 39px 80px;
+    padding: 115px 39px 70px;
 
     position: relative;
 }
 
-/* Logo */
+
+/* LOGO */
 
 .logo {
-    width: 82px;
-    height: 82px;
+    width: 78px;
+    height: 78px;
 
     border-radius: 50%;
 
@@ -86,7 +88,7 @@ body {
 
     display: block;
 
-    margin-bottom: 42px;
+    margin-bottom: 40px;
 
     box-shadow:
         0 7px 18px rgba(0,0,0,0.12),
@@ -94,6 +96,7 @@ body {
 
     animation: logoMove 3.5s ease-in-out infinite;
 }
+
 
 @keyframes logoMove {
 
@@ -106,47 +109,52 @@ body {
     }
 }
 
-/* Heading */
+
+/* TITLE */
 
 .title {
     color: #a77b13;
 
-    font-size: 46px;
+    font-size: 42px;
     line-height: 1.12;
 
     font-weight: 800;
 
-    letter-spacing: -1.7px;
+    letter-spacing: -1.5px;
 
-    margin-bottom: 55px;
+    margin-bottom: 48px;
 }
 
-/* Features */
+
+/* FEATURES */
 
 .features {
     display: flex;
     flex-direction: column;
 
-    gap: 25px;
+    gap: 24px;
 
-    margin-bottom: 55px;
+    margin-bottom: 50px;
 }
+
 
 .feature {
     display: flex;
     align-items: center;
 
-    gap: 22px;
+    gap: 21px;
 
     color: #14263a;
 
-    font-size: 25px;
+    font-size: 20px;
+
     font-weight: 500;
 
     line-height: 1.25;
 }
 
-/* Feature Icon */
+
+/* ICON */
 
 .icon {
     width: 61px;
@@ -156,7 +164,7 @@ body {
 
     border-radius: 50%;
 
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.95);
 
     display: flex;
     align-items: center;
@@ -164,7 +172,7 @@ body {
 
     color: #ae8220;
 
-    font-size: 27px;
+    font-size: 23px;
 
     border: 1px solid rgba(130,130,130,0.13);
 
@@ -173,34 +181,38 @@ body {
         inset 0 1px 2px rgba(255,255,255,0.9);
 }
 
-/* Timer */
+
+/* TIMER */
 
 .timer-row {
 
     display: flex;
     align-items: center;
 
-    gap: 20px;
+    gap: 18px;
 
-    margin-top: 4px;
+    margin-top: 3px;
+
     margin-bottom: 35px;
 }
 
-/* Progress */
+
+/* PROGRESS */
 
 .progress-container {
     flex: 1;
 
-    height: 10px;
+    height: 9px;
 
     background: #cbd3dd;
 
     border-radius: 20px;
 
-    overflow: hidden;
-
     position: relative;
+
+    overflow: visible;
 }
+
 
 .progress-bar {
     position: absolute;
@@ -219,17 +231,17 @@ body {
     transition: width 1s linear;
 }
 
-/* Little round handle */
+
+/* ROUND DOT */
 
 .progress-dot {
     position: absolute;
 
     top: 50%;
-
     right: -5px;
 
-    width: 28px;
-    height: 28px;
+    width: 27px;
+    height: 27px;
 
     transform: translateY(-50%);
 
@@ -244,23 +256,25 @@ body {
     transition: right 1s linear;
 }
 
-/* Time */
+
+/* TIMER TEXT */
 
 .timer {
-    min-width: 65px;
+    min-width: 64px;
 
     color: #102033;
 
-    font-size: 21px;
+    font-size: 20px;
 
     font-weight: 600;
 
-    letter-spacing: 0.5px;
+    letter-spacing: 0.4px;
 
     text-align: right;
 }
 
-/* Telegram Button */
+
+/* TELEGRAM */
 
 .telegram-btn {
 
@@ -281,9 +295,10 @@ body {
     align-items: center;
     justify-content: center;
 
-    gap: 13px;
+    gap: 12px;
 
-    font-size: 24px;
+    font-size: 22px;
+
     font-weight: 700;
 
     box-shadow:
@@ -294,6 +309,7 @@ body {
         box-shadow 0.2s ease;
 }
 
+
 .telegram-btn:hover {
     transform: translateY(-2px);
 
@@ -301,12 +317,13 @@ body {
         0 21px 32px rgba(8,30,48,0.25);
 }
 
-/* Telegram Circle */
+
+/* TELEGRAM ICON */
 
 .telegram-icon {
 
-    width: 30px;
-    height: 30px;
+    width: 29px;
+    height: 29px;
 
     border-radius: 50%;
 
@@ -319,12 +336,13 @@ body {
     align-items: center;
     justify-content: center;
 
-    font-size: 17px;
+    font-size: 16px;
 
     font-weight: 800;
 }
 
-/* Subscribers */
+
+/* SUBSCRIBERS */
 
 .subscribers {
 
@@ -332,14 +350,15 @@ body {
 
     color: #788494;
 
-    font-size: 20px;
+    font-size: 18px;
 
-    margin-top: 31px;
+    margin-top: 29px;
 
     font-weight: 500;
 }
 
-/* Disclaimer */
+
+/* DISCLAIMER */
 
 .disclaimer {
 
@@ -347,66 +366,76 @@ body {
 
     color: #7b8999;
 
-    font-size: 16px;
+    font-size: 14px;
 
     line-height: 1.7;
 
-    margin-top: 57px;
+    margin-top: 54px;
 
     padding: 0 5px;
 }
 
 
-/* Mobile */
+/* MOBILE */
 
 @media (max-width: 600px) {
 
     .page {
 
         padding:
-            165px
+            160px
             39px
             70px;
     }
 
+
     .logo {
 
-        width: 78px;
-        height: 78px;
+        width: 72px;
+        height: 72px;
 
         margin-bottom: 39px;
     }
 
+
     .title {
 
-        font-size: 43px;
+        font-size: 42px;
 
-        letter-spacing: -1.8px;
+        line-height: 1.13;
 
-        margin-bottom: 56px;
+        letter-spacing: -1.6px;
+
+        margin-bottom: 50px;
     }
+
 
     .features {
 
-        gap: 25px;
+        gap: 24px;
 
-        margin-bottom: 56px;
+        margin-bottom: 51px;
     }
+
 
     .feature {
 
-        font-size: 24px;
+        font-size: 20px;
 
         gap: 21px;
     }
 
+
     .icon {
 
-        width: 60px;
-        height: 60px;
+        width: 61px;
+        height: 61px;
 
-        flex-basis: 60px;
+        flex-basis: 61px;
+
+        font-size: 22px;
     }
+
 
     .timer-row {
 
@@ -415,33 +444,47 @@ body {
         margin-bottom: 35px;
     }
 
+
+    .progress-container {
+
+        height: 9px;
+    }
+
+
     .timer {
 
         font-size: 20px;
+
+        min-width: 62px;
     }
+
 
     .telegram-btn {
 
-        height: 92px;
+        height: 91px;
 
-        font-size: 23px;
+        font-size: 22px;
     }
+
 
     .subscribers {
 
-        font-size: 19px;
+        font-size: 18px;
+
+        margin-top: 29px;
     }
+
 
     .disclaimer {
 
-        font-size: 15px;
+        font-size: 14px;
 
-        margin-top: 58px;
+        margin-top: 55px;
     }
 }
 
 
-/* Small Phones */
+/* SMALL PHONE */
 
 @media (max-width: 380px) {
 
@@ -451,23 +494,27 @@ body {
         padding-right: 25px;
     }
 
+
     .title {
 
         font-size: 38px;
     }
 
+
     .feature {
 
-        font-size: 21px;
+        font-size: 19px;
     }
+
 
     .icon {
 
-        width: 55px;
-        height: 55px;
+        width: 57px;
+        height: 57px;
 
-        flex-basis: 55px;
+        flex-basis: 57px;
     }
+
 
     .telegram-btn {
 
@@ -477,6 +524,7 @@ body {
 
 </style>
 </head>
+
 
 <body>
 
@@ -489,12 +537,14 @@ body {
         alt="ZERO TO HERO"
     >
 
-    <!-- Heading -->
+
+    <!-- TITLE -->
     <h1 class="title">
         Zero to Hero Expert
     </h1>
 
-    <!-- Features -->
+
+    <!-- FEATURES -->
     <div class="features">
 
         <div class="feature">
@@ -502,15 +552,18 @@ body {
             <span>Daily Intraday Calls</span>
         </div>
 
+
         <div class="feature">
             <div class="icon">↗</div>
             <span>Swing Trading Ideas</span>
         </div>
 
+
         <div class="feature">
             <div class="icon">◎</div>
             <span>Entry &amp; Exit Levels</span>
         </div>
+
 
         <div class="feature">
             <div class="icon">♢</div>
@@ -519,51 +572,64 @@ body {
 
     </div>
 
+
     <!-- TIMER -->
+
     <div class="timer-row">
 
         <div class="progress-container">
 
             <div
                 class="progress-bar"
-                id="progressBar"
-            ></div>
+                id="progressBar">
+            </div>
 
             <div
                 class="progress-dot"
-                id="progressDot"
-            ></div>
+                id="progressDot">
+            </div>
 
         </div>
 
+
         <div
             class="timer"
-            id="timer"
-        >
+            id="timer">
             00:55
         </div>
 
     </div>
 
-    <!-- Telegram -->
+
+    <!-- TELEGRAM -->
+
     <a
         href="https://t.me/+JRm7zWfdBN4wMmE1"
         class="telegram-btn"
-        target="_blank"
-    >
+        target="_blank">
+
         <span class="telegram-icon">➤</span>
+
         <span>Join Telegram</span>
+
     </a>
 
-    <!-- Subscribers -->
+
+    <!-- SUBSCRIBERS -->
+
     <div class="subscribers">
         37,000+ subscribers
     </div>
 
-    <!-- Disclaimer -->
+
+    <!-- DISCLAIMER -->
+
     <div class="disclaimer">
+
         Risk Disclaimer: Investment in Securities market are subject to market risks.<br>
+
         Please read all the related documents carefully before Investing.
+
     </div>
 
 </div>
@@ -572,14 +638,15 @@ body {
 <script>
 
 /* =========================
-   55 SECOND COUNTDOWN
+   55 SECOND TIMER
 ========================= */
 
 let timeLeft = 55;
 
 const totalTime = 55;
 
-const timer = document.getElementById("timer");
+const timer =
+    document.getElementById("timer");
 
 const progressBar =
     document.getElementById("progressBar");
@@ -592,29 +659,29 @@ function updateTimer() {
 
     let seconds = timeLeft;
 
+
     timer.textContent =
-        "00:" + String(seconds).padStart(2, "0");
+        "00:" +
+        String(seconds).padStart(2, "0");
 
 
-    /*
-       Line becomes shorter
-       as timer decreases
-    */
+    /* LINE */
 
     const percentage =
         (timeLeft / totalTime) * 100;
+
 
     progressBar.style.width =
         percentage + "%";
 
 
-    /*
-       Move the round handle
-    */
+    /* DOT */
 
     progressDot.style.right =
         (100 - percentage) + "%";
 
+
+    /* STOP */
 
     if (timeLeft <= 0) {
 
@@ -629,16 +696,15 @@ function updateTimer() {
         return;
     }
 
+
     timeLeft--;
 }
 
 
-/* Start immediately */
+/* START */
 
 updateTimer();
 
-
-/* Every 1 second */
 
 const countdown =
     setInterval(updateTimer, 1000);
