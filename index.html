@@ -3,90 +3,797 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>ZERO TO HERO TRADER™️</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
 <script>
-!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
-n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
-t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
-document,'script','https://connect.facebook.net/en_US/fbevents.js');
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+
 fbq('init', '4712821815671571');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=4712821815671571&ev=PageView&noscript=1"/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=4712821815671571&ev=PageView&noscript=1"/>
+</noscript>
+
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Inter',sans-serif;}
-body{background:radial-gradient(circle at 50% 0%,#fff 0%,#f5f7fb 45%,#e9edf5 100%);color:#102033;min-height:100vh;display:flex;justify-content:center;overflow-x:hidden;}
-.page{width:100%;max-width:650px;padding:115px 39px 70px;}
-.logo{width:78px;height:78px;border-radius:50%;object-fit:cover;display:block;margin-bottom:40px;box-shadow:0 7px 18px rgba(0,0,0,0.12),0 0 0 5px rgba(255,255,255,0.7);animation:logoMove 3.5s ease-in-out infinite;}
-@keyframes logoMove{0%,100%{transform:translateX(-5px);}50%{transform:translateX(5px);}}
-.title{color:#a77b13;font-size:42px;line-height:1.12;font-weight:800;letter-spacing:-1.5px;margin-bottom:48px;}
-.features{display:flex;flex-direction:column;gap:24px;margin-bottom:50px;}
-.feature{display:flex;align-items:center;gap:21px;color:#14263a;font-size:20px;font-weight:500;}
-.icon{width:61px;height:61px;flex:0 0 61px;border-radius:50%;background:rgba(255,255,255,0.95);display:flex;align-items:center;justify-content:center;color:#ae8220;font-size:23px;border:1px solid rgba(130,130,130,0.13);box-shadow:0 7px 18px rgba(25,40,60,0.10),inset 0 1px 2px rgba(255,255,255,0.9);}
-.timer-row{display:flex;align-items:center;gap:18px;margin-top:3px;margin-bottom:35px;}
-.progress-container{flex:1;height:9px;background:#cbd3dd;border-radius:20px;position:relative;}
-.progress-bar{position:absolute;left:0;top:0;height:100%;width:100%;background:#b28a20;border-radius:20px;transition:width 1s linear;}
-.progress-dot{position:absolute;top:50%;right:-5px;width:27px;height:27px;transform:translateY(-50%);border-radius:50%;background:#b28a20;box-shadow:0 0 0 5px rgba(178,138,32,0.15),0 3px 7px rgba(0,0,0,0.15);transition:right 1s linear;}
-.timer{min-width:64px;color:#102033;font-size:20px;font-weight:600;text-align:right;}
-.telegram-btn{width:100%;height:91px;border-radius:50px;background:#092437;color:#fff;text-decoration:none;display:flex;align-items:center;justify-content:center;gap:12px;font-size:22px;font-weight:700;box-shadow:0 18px 28px rgba(8,30,48,0.20);transition:transform 0.2s ease;}
-.telegram-btn:hover{transform:translateY(-2px);}
-.telegram-icon{width:29px;height:29px;border-radius:50%;background:#fff;color:#092437;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;}
-.subscribers{text-align:center;color:#788494;font-size:18px;margin-top:29px;font-weight:500;}
-.disclaimer{text-align:center;color:#7b8999;font-size:14px;line-height:1.7;margin-top:54px;padding:0 5px;}
-@media(max-width:380px){.page{padding:120px 20px 50px;}.title{font-size:36px;}.feature{font-size:18px;}.icon{width:52px;height:52px;flex-basis:52px;}.telegram-btn{height:75px;font-size:19px;}}
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+html,
+body {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #ffffff 0%,
+            #f7f8fb 42%,
+            #e9edf5 100%
+        );
+
+    color: #102033;
+
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   MAIN PAGE
+========================= */
+
+.page {
+    width: 100%;
+    max-width: 650px;
+    min-height: 100vh;
+
+    margin: 0 auto;
+
+    padding: 165px 39px 70px;
+}
+
+
+/* =========================
+   LOGO / DP
+========================= */
+
+.logo {
+    display: block;
+
+    width: 78px;
+    height: 78px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+
+    margin-bottom: 42px;
+
+    background: #ffffff;
+
+    box-shadow:
+        0 8px 20px rgba(20, 35, 55, 0.12),
+        0 0 0 5px rgba(255,255,255,0.85);
+
+    animation: logoMove 3.5s ease-in-out infinite;
+}
+
+
+@keyframes logoMove {
+
+    0%,
+    100% {
+        transform: translateX(-5px);
+    }
+
+    50% {
+        transform: translateX(5px);
+    }
+}
+
+
+/* =========================
+   TITLE
+========================= */
+
+.title {
+    color: #aa7b13;
+
+    font-size: 42px;
+
+    line-height: 1.13;
+
+    font-weight: 800;
+
+    letter-spacing: -1.5px;
+
+    margin-bottom: 55px;
+}
+
+
+/* =========================
+   FEATURES
+========================= */
+
+.features {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 25px;
+
+    margin-bottom: 55px;
+}
+
+
+.feature {
+    display: flex;
+
+    align-items: center;
+
+    gap: 21px;
+
+    color: #14263a;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   FEATURE ICON
+========================= */
+
+.icon {
+    width: 61px;
+    height: 61px;
+
+    flex: 0 0 61px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    color: #ad8222;
+
+    font-size: 23px;
+
+    border: 1px solid rgba(120,130,145,0.12);
+
+    box-shadow:
+        0 8px 18px rgba(30,45,65,0.10),
+        inset 0 1px 2px rgba(255,255,255,0.95);
+}
+
+
+/* =========================
+   TIMER AREA
+========================= */
+
+.timer-row {
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    margin-bottom: 35px;
+}
+
+
+/* =========================
+   PROGRESS BAR
+========================= */
+
+.progress-container {
+    position: relative;
+
+    flex: 1;
+
+    height: 9px;
+
+    background: #cbd3dd;
+
+    border-radius: 20px;
+
+    overflow: visible;
+}
+
+
+.progress-bar {
+    position: absolute;
+
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    background: #b28a20;
+
+    border-radius: 20px;
+
+    transition: width 1s linear;
+}
+
+
+/* =========================
+   MOVING DOT
+========================= */
+
+.progress-dot {
+    position: absolute;
+
+    top: 50%;
+    right: -5px;
+
+    width: 27px;
+    height: 27px;
+
+    transform: translateY(-50%);
+
+    border-radius: 50%;
+
+    background: #b28a20;
+
+    box-shadow:
+        0 0 0 5px rgba(178,138,32,0.14),
+        0 3px 8px rgba(0,0,0,0.14);
+
+    transition: right 1s linear;
+}
+
+
+/* =========================
+   TIMER TEXT
+========================= */
+
+.timer {
+    min-width: 64px;
+
+    color: #102033;
+
+    font-size: 20px;
+
+    line-height: 1;
+
+    font-weight: 600;
+
+    text-align: right;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* =========================
+   TELEGRAM BUTTON
+========================= */
+
+.telegram-btn {
+    width: 100%;
+
+    height: 91px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    border-radius: 50px;
+
+    background: #092637;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-size: 22px;
+
+    font-weight: 700;
+
+    box-shadow:
+        0 18px 28px rgba(8,30,48,0.20);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+
+.telegram-btn:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 21px 32px rgba(8,30,48,0.24);
+}
+
+
+/* =========================
+   TELEGRAM ICON
+========================= */
+
+.telegram-icon {
+    width: 29px;
+    height: 29px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #ffffff;
+
+    color: #092637;
+
+    font-size: 16px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   SUBSCRIBERS
+========================= */
+
+.subscribers {
+    margin-top: 29px;
+
+    text-align: center;
+
+    color: #788494;
+
+    font-size: 18px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   DISCLAIMER
+========================= */
+
+.disclaimer {
+    margin-top: 55px;
+
+    padding: 0 4px;
+
+    text-align: center;
+
+    color: #7b8999;
+
+    font-size: 14px;
+
+    line-height: 1.7;
+
+    font-weight: 400;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .page {
+        padding:
+            165px
+            39px
+            70px;
+    }
+
+
+    .logo {
+        width: 78px;
+        height: 78px;
+
+        margin-bottom: 42px;
+    }
+
+
+    .title {
+        font-size: 42px;
+
+        line-height: 1.13;
+
+        letter-spacing: -1.5px;
+
+        margin-bottom: 55px;
+    }
+
+
+    .features {
+        gap: 25px;
+
+        margin-bottom: 55px;
+    }
+
+
+    .feature {
+        font-size: 20px;
+
+        gap: 21px;
+    }
+
+
+    .icon {
+        width: 61px;
+        height: 61px;
+
+        flex: 0 0 61px;
+
+        font-size: 23px;
+    }
+
+
+    .timer-row {
+        gap: 18px;
+
+        margin-bottom: 35px;
+    }
+
+
+    .progress-container {
+        height: 9px;
+    }
+
+
+    .progress-dot {
+        width: 27px;
+        height: 27px;
+    }
+
+
+    .timer {
+        min-width: 64px;
+
+        font-size: 20px;
+    }
+
+
+    .telegram-btn {
+        height: 91px;
+
+        font-size: 22px;
+    }
+
+
+    .subscribers {
+        margin-top: 29px;
+
+        font-size: 18px;
+    }
+
+
+    .disclaimer {
+        margin-top: 55px;
+
+        font-size: 14px;
+    }
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 380px) {
+
+    .page {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+
+    .logo {
+        width: 72px;
+        height: 72px;
+    }
+
+
+    .title {
+        font-size: 37px;
+    }
+
+
+    .feature {
+        font-size: 18px;
+
+        gap: 18px;
+    }
+
+
+    .icon {
+        width: 56px;
+        height: 56px;
+
+        flex-basis: 56px;
+    }
+
+
+    .telegram-btn {
+        height: 82px;
+
+        font-size: 20px;
+    }
+
+
+    .subscribers {
+        font-size: 16px;
+    }
+
+
+    .disclaimer {
+        font-size: 13px;
+    }
+}
+
 </style>
 </head>
+
+
 <body>
+
 <div class="page">
-    <img src="logo.png" class="logo" alt="ZERO TO HERO">
-    <h1 class="title">Zero to Hero Expert</h1>
+
+    <!-- DP -->
+    <img
+        src="logo.png"
+        class="logo"
+        alt="ZERO TO HERO"
+    >
+
+
+    <!-- TITLE -->
+    <h1 class="title">
+        Zero to Hero Expert
+    </h1>
+
+
+    <!-- FEATURES -->
     <div class="features">
-        <div class="feature"><div class="icon">📊</div><span>Daily Intraday Calls</span></div>
-        <div class="feature"><div class="icon">📈</div><span>Swing Trading Ideas</span></div>
-        <div class="feature"><div class="icon">🎯</div><span>Entry &amp; Exit Levels</span></div>
-        <div class="feature"><div class="icon">🛡️</div><span>Risk Management</span></div>
-    </div>
-    <div class="timer-row">
-        <div class="progress-container">
-            <div class="progress-bar" id="progressBar"></div>
-            <div class="progress-dot" id="progressDot"></div>
+
+        <div class="feature">
+
+            <div class="icon">
+                ▥
+            </div>
+
+            <span>
+                Daily Intraday Calls
+            </span>
+
         </div>
-        <div class="timer" id="timer">00:55</div>
+
+
+        <div class="feature">
+
+            <div class="icon">
+                ↗
+            </div>
+
+            <span>
+                Swing Trading Ideas
+            </span>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">
+                ◎
+            </div>
+
+            <span>
+                Entry &amp; Exit Levels
+            </span>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="icon">
+                ♢
+            </div>
+
+            <span>
+                Risk Management
+            </span>
+
+        </div>
+
     </div>
-    <a href="https://t.me/+JRm7zWfdBN4wMmE1" class="telegram-btn" target="_blank">
-        <span class="telegram-icon">➤</span>
-        <span>Join Telegram</span>
+
+
+    <!-- TIMER -->
+
+    <div class="timer-row">
+
+        <div class="progress-container">
+
+            <div
+                class="progress-bar"
+                id="progressBar">
+            </div>
+
+            <div
+                class="progress-dot"
+                id="progressDot">
+            </div>
+
+        </div>
+
+
+        <div
+            class="timer"
+            id="timer">
+            00:55
+        </div>
+
+    </div>
+
+
+    <!-- TELEGRAM BUTTON -->
+
+    <a
+        href="https://t.me/+JRm7zWfdBN4wMmE1"
+        class="telegram-btn"
+        target="_blank"
+        rel="noopener noreferrer">
+
+        <span class="telegram-icon">
+            ➤
+        </span>
+
+        <span>
+            Join Telegram
+        </span>
+
     </a>
-    <div class="subscribers">37,000+ subscribers</div>
-    <div class="disclaimer">
-        Risk Disclaimer: Investment in Securities market are subject to market risks.<br>
-        Please read all the related documents carefully before Investing.
+
+
+    <!-- SUBSCRIBERS -->
+
+    <div class="subscribers">
+        37,000+ subscribers
     </div>
+
+
+    <!-- DISCLAIMER -->
+
+    <div class="disclaimer">
+
+        Risk Disclaimer: Investment in Securities market are subject to market risks.<br>
+
+        Please read all the related documents carefully before Investing.
+
+    </div>
+
 </div>
+
+
 <script>
+
+/* =========================
+   55 SECOND COUNTDOWN
+========================= */
+
 let timeLeft = 55;
-const timer = document.getElementById("timer");
-const progressBar = document.getElementById("progressBar");
-const progressDot = document.getElementById("progressDot");
+
+const totalTime = 55;
+
+const timer =
+    document.getElementById("timer");
+
+const progressBar =
+    document.getElementById("progressBar");
+
+const progressDot =
+    document.getElementById("progressDot");
+
 
 function updateTimer() {
-    timer.textContent = "00:" + String(timeLeft).padStart(2, "0");
-    const percentage = (timeLeft / 55) * 100;
-    progressBar.style.width = percentage + "%";
-    progressDot.style.right = (100 - percentage) + "%";
+
+    const seconds = timeLeft;
+
+
+    /* TIMER TEXT */
+
+    timer.textContent =
+        "00:" +
+        String(seconds).padStart(2, "0");
+
+
+    /* PROGRESS */
+
+    const percentage =
+        (timeLeft / totalTime) * 100;
+
+
+    progressBar.style.width =
+        percentage + "%";
+
+
+    /* DOT */
+
+    progressDot.style.right =
+        (100 - percentage) + "%";
+
+
+    /* STOP AT ZERO */
+
     if (timeLeft <= 0) {
+
         clearInterval(countdown);
+
         timer.textContent = "00:00";
+
         progressBar.style.width = "0%";
+
         progressDot.style.right = "100%";
+
         return;
     }
+
+
     timeLeft--;
 }
+
+
+/* INITIAL */
+
 updateTimer();
-const countdown = setInterval(updateTimer, 1000);
+
+
+/* EVERY SECOND */
+
+const countdown =
+    setInterval(updateTimer, 1000);
+
 </script>
+
 </body>
 </html>
