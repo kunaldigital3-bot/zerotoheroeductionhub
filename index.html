@@ -3,11 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ZERO TO HERO TRADER™</title>
+    <title>ZERO TO HERO TRADER™️</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
+
     <script>
     !function(f,b,e,v,n,t,s)
     {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -20,9 +21,12 @@
     fbq('init', '4712821815671571');
     fbq('track', 'PageView');
     </script>
-    <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=4712821815671571&ev=PageView&noscript=1"
-    /></noscript>
+
+    <noscript>
+        <img height="1" width="1" style="display:none"
+        src="https://www.facebook.com/tr?id=4712821815671571&ev=PageView&noscript=1"/>
+    </noscript>
+
     <style>
         * {
             margin: 0;
@@ -31,215 +35,504 @@
             font-family: 'Inter', sans-serif;
         }
 
+        html {
+            min-height: 100%;
+        }
+
         body {
-            background-color: #060b13;
+            min-height: 100vh;
+            padding: 25px 12px;
             display: flex;
             justify-content: center;
             align-items: center;
-            min-height: 100vh;
-            padding: 20px 10px;
+            background:
+                radial-gradient(circle at 18% 20%, rgba(0, 106, 255, 0.14), transparent 30%),
+                radial-gradient(circle at 82% 75%, rgba(0, 196, 255, 0.08), transparent 28%),
+                #050b16;
+            position: relative;
+            overflow-x: hidden;
         }
 
-        /* Main Card Container */
-        .landing-card {
-            background: linear-gradient(180deg, #131c2e 0%, #0d1524 100%);
-            width: 100%;
-            max-width: 450px;
-            border-radius: 24px;
-            border: 1px solid #1e293b;
-            padding: 35px 24px;
-            text-align: center;
-            box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.5);
+        /* Grid Background */
+        body::before {
+            content: "";
+            position: fixed;
+            inset: 0;
+            pointer-events: none;
+            opacity: 0.32;
+            background-image:
+                linear-gradient(rgba(56, 102, 150, 0.16) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(56, 102, 150, 0.16) 1px, transparent 1px);
+            background-size: 58px 58px;
         }
 
-        /* Logo Styling */
-        .logo-container {
-            width: 90px;
-            height: 90px;
-            margin: 0 auto 20px auto;
+        /* Soft background glow */
+        body::after {
+            content: "";
+            position: fixed;
+            width: 380px;
+            height: 380px;
+            left: -180px;
+            bottom: -160px;
             border-radius: 50%;
-            background: #facc15;
-            padding: 4px;
-            box-shadow: 0 0 15px rgba(250, 204, 21, 0.2);
+            background: rgba(0, 140, 255, 0.10);
+            filter: blur(70px);
+            pointer-events: none;
+        }
+
+        /* Main Card */
+        .landing-card {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            max-width: 665px;
+            min-height: 930px;
+            padding: 48px 34px 36px;
+
+            background:
+                radial-gradient(circle at 50% 8%, rgba(36, 75, 135, 0.10), transparent 30%),
+                linear-gradient(145deg, #111b31 0%, #091224 55%, #07101f 100%);
+
+            border: 1px solid rgba(202, 167, 72, 0.45);
+            border-radius: 38px;
+
+            box-shadow:
+                0 0 0 1px rgba(255,255,255,0.025) inset,
+                0 25px 70px rgba(0, 0, 0, 0.55),
+                0 0 45px rgba(29, 76, 130, 0.08);
+
+            text-align: center;
+        }
+
+        /* DP / Logo */
+        .logo-container {
+            position: relative;
+            width: 182px;
+            height: 182px;
+            margin: 0 auto 52px;
+
+            border-radius: 50%;
+            padding: 8px;
+
+            background: linear-gradient(
+                135deg,
+                #ffe98a,
+                #f7c94c,
+                #fff0a7,
+                #d99b22
+            );
+
+            box-shadow:
+                0 0 0 8px rgba(250, 204, 74, 0.10),
+                0 0 35px rgba(250, 204, 74, 0.20);
+
+            animation: floatingDP 3.8s ease-in-out infinite;
+        }
+
+        /* Outer dark ring */
+        .logo-container::before {
+            content: "";
+            position: absolute;
+            inset: -9px;
+            border-radius: 50%;
+            border: 2px solid rgba(255, 218, 92, 0.18);
+            box-shadow: 0 0 28px rgba(255, 210, 70, 0.16);
         }
 
         .logo-container img {
+            display: block;
             width: 100%;
             height: 100%;
             border-radius: 50%;
             object-fit: cover;
+            border: 4px solid #11192b;
         }
 
-        /* Headings */
+        /* DP left-right movement */
+        @keyframes floatingDP {
+            0%, 100% {
+                transform: translateX(-7px) translateY(0);
+            }
+
+            25% {
+                transform: translateX(0px) translateY(-3px);
+            }
+
+            50% {
+                transform: translateX(7px) translateY(0);
+            }
+
+            75% {
+                transform: translateX(0px) translateY(3px);
+            }
+        }
+
+        /* Heading */
         .brand-name {
-            color: #facc15;
-            font-size: 22px;
+            color: #ffd95c;
+            font-size: 31px;
+            line-height: 1.25;
             font-weight: 800;
+            letter-spacing: 0.8px;
+            margin-bottom: 22px;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
-            margin-bottom: 8px;
-            line-height: 1.3;
+            text-shadow: 0 0 18px rgba(255, 207, 70, 0.08);
         }
 
         .segments {
-            color: #ffffff;
-            font-size: 15px;
-            font-weight: 700;
+            color: #e4e7ee;
+            font-size: 18px;
+            font-weight: 600;
             letter-spacing: 1px;
-            margin-bottom: 12px;
+            margin-bottom: 38px;
         }
 
         .tagline {
-            color: #94a3b8;
-            font-size: 14px;
-            font-weight: 400;
-            margin-bottom: 25px;
+            color: #c2c8d4;
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 38px;
         }
 
-        /* Updated Telegram Buttons (Darker & Brighter Green) */
+        /* Telegram Button */
         .btn-telegram {
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
-            background-color: #00E65B; /* Vibrant Solid Green */
-            color: #000000;
+
+            width: 100%;
+            min-height: 88px;
+
+            padding: 18px 20px;
+            margin: 0 0 32px;
+
+            border-radius: 19px;
+
+            background:
+                linear-gradient(
+                    110deg,
+                    #08b9ee 0%,
+                    #098fea 48%,
+                    #1559e9 100%
+                );
+
+            border: 1px solid rgba(255,255,255,0.35);
+
+            color: #ffffff;
             text-decoration: none;
-            font-size: 16px;
-            font-weight: 800; /* Extra bold text for high contrast */
-            padding: 16px 20px;
-            border-radius: 12px;
-            margin: 15px 0;
-            transition: transform 0.2s ease, background-color 0.2s ease;
-            box-shadow: 0px 6px 20px rgba(0, 230, 91, 0.35);
+
+            font-size: 21px;
+            font-weight: 800;
+
+            box-shadow:
+                0 10px 30px rgba(0, 111, 255, 0.28),
+                0 0 25px rgba(0, 183, 255, 0.08);
+
+            transition:
+                transform 0.2s ease,
+                box-shadow 0.2s ease;
+            overflow: hidden;
+        }
+
+        .btn-telegram::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 80%;
+            height: 100%;
+
+            background: linear-gradient(
+                90deg,
+                transparent,
+                rgba(255,255,255,0.12),
+                transparent
+            );
+
+            animation: buttonShine 4s ease-in-out infinite;
+        }
+
+        @keyframes buttonShine {
+            0%, 65% {
+                left: -100%;
+            }
+
+            85%, 100% {
+                left: 130%;
+            }
         }
 
         .btn-telegram:hover {
-            transform: scale(1.02);
-            background-color: #00b344; /* Darker green on hover */
+            transform: translateY(-2px);
+            box-shadow:
+                0 13px 35px rgba(0, 111, 255, 0.38),
+                0 0 28px rgba(0, 183, 255, 0.12);
         }
 
-        /* Proof/Trust Box */
+        /* Trust Box */
         .trust-box {
-            background-color: rgba(30, 41, 59, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-            border-radius: 12px;
-            padding: 12px;
-            margin: 15px 0 25px 0;
+            width: 100%;
+            min-height: 70px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 15px;
+
+            margin-bottom: 34px;
+
+            background: rgba(18, 27, 44, 0.75);
+            border: 1px solid rgba(216, 177, 65, 0.38);
+            border-radius: 18px;
+
+            box-shadow: inset 0 0 20px rgba(255, 204, 70, 0.015);
         }
 
         .trust-item {
-            color: #e2e8f0;
-            font-size: 14px;
-            font-weight: 500;
-            margin: 4px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
+            color: #f0d86b;
+            font-size: 16px;
+            font-weight: 700;
         }
 
-        /* Features List */
+        /* Features */
         .features-list {
+            width: 100%;
+            margin: 0 auto 34px;
+            padding: 28px 25px;
+
             text-align: left;
-            max-width: 320px;
-            margin: 0 auto 25px auto;
+
+            background:
+                linear-gradient(
+                    145deg,
+                    rgba(27, 38, 58, 0.78),
+                    rgba(13, 23, 40, 0.72)
+                );
+
+            border: 1px solid rgba(255,255,255,0.09);
+            border-radius: 20px;
+
+            box-shadow:
+                inset 0 1px 0 rgba(255,255,255,0.025),
+                0 10px 25px rgba(0,0,0,0.10);
         }
 
         .feature-item {
-            color: #ffffff;
-            font-size: 14px;
+            color: #e7ebf3;
+            font-size: 17px;
             font-weight: 500;
-            margin-bottom: 14px;
+
+            margin-bottom: 24px;
+
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+        }
+
+        .feature-item::first-letter {
+            color: #7f8490;
         }
 
         .feature-item:last-child {
             margin-bottom: 0;
         }
 
-        /* Subtext & Urgency */
+        /* Second Telegram button */
+        .features-list + .btn-telegram {
+            display: none;
+        }
+
+        /* Bottom warning */
         .urgency-text {
-            color: #facc15;
-            font-size: 13px;
-            font-weight: 600;
-            margin-top: 15px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
+            display: none;
         }
 
         .community-text {
-            color: #94a3b8;
-            font-size: 12px;
-            font-weight: 500;
-            margin: 12px 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 6px;
+            display: none;
         }
 
         .disclaimer {
-            color: #64748b;
-            font-size: 11px;
-            margin-top: 15px;
-            line-height: 1.4;
-        }
-
-        /* Footer Attribution */
-        .footer-credit {
-            color: #64748b;
-            font-size: 12px;
-            margin-top: 25px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            padding-top: 15px;
-        }
-
-        .footer-credit a {
-            color: #3b82f6;
-            text-decoration: none;
+            color: #aeb6c5;
+            font-size: 14px;
             font-weight: 500;
+            margin-top: 5px;
+            line-height: 1.5;
+        }
+
+        /* Footer hidden like screenshot */
+        .footer-credit {
+            display: none;
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+
+            body {
+                padding: 20px 21px;
+                align-items: center;
+            }
+
+            .landing-card {
+                max-width: 100%;
+                min-height: auto;
+                padding: 40px 33px 34px;
+                border-radius: 35px;
+            }
+
+            .logo-container {
+                width: 170px;
+                height: 170px;
+                margin-bottom: 48px;
+            }
+
+            .brand-name {
+                font-size: 29px;
+                margin-bottom: 22px;
+            }
+
+            .segments {
+                font-size: 17px;
+                margin-bottom: 36px;
+                white-space: nowrap;
+            }
+
+            .tagline {
+                font-size: 16px;
+                margin-bottom: 34px;
+            }
+
+            .btn-telegram {
+                min-height: 88px;
+                font-size: 20px;
+                border-radius: 18px;
+                margin-bottom: 31px;
+            }
+
+            .trust-box {
+                min-height: 69px;
+                margin-bottom: 34px;
+            }
+
+            .trust-item {
+                font-size: 14px;
+            }
+
+            .features-list {
+                padding: 28px 21px;
+                margin-bottom: 34px;
+            }
+
+            .feature-item {
+                font-size: 16px;
+                margin-bottom: 23px;
+                line-height: 1.4;
+            }
+
+            .disclaimer {
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 380px) {
+
+            .landing-card {
+                padding-left: 24px;
+                padding-right: 24px;
+            }
+
+            .logo-container {
+                width: 150px;
+                height: 150px;
+            }
+
+            .brand-name {
+                font-size: 25px;
+            }
+
+            .segments {
+                font-size: 14px;
+            }
+
+            .btn-telegram {
+                font-size: 17px;
+            }
         }
     </style>
 </head>
+
 <body>
 
     <div class="landing-card">
+
         <div class="logo-container">
             <img src="logo.png" alt="BOOMING BULLS Logo">
         </div>
 
-        <h1 class="brand-name">ZERO TO HERO TRADER™<br>INDIAN MARKET</h1>
-        <div class="segments">NIFTY • BANKNIFTY • OPTIONS</div>
-        <p class="tagline">Daily Intraday Trading Signals & Analysis</p>
+        <h1 class="brand-name">
+            ZERO TO HERO TRADER™️<br>
+            INDIAN MARKET
+        </h1>
 
-        <a href="https://t.me/+JRm7zWfdBN4wMmE1" class="btn-telegram" target="_blank">
+        <div class="segments">
+            NIFTY • BANKNIFTY • OPTIONS
+        </div>
+
+        <p class="tagline">
+            Daily Intraday Trading Signals & Analysis
+        </p>
+
+        <a href="https://t.me/+JRm7zWfdBN4wMmE1"
+           class="btn-telegram"
+           target="_blank">
             🚀 Join Free Telegram Channel
         </a>
 
         <div class="trust-box">
-            <div class="trust-item">✓ Trusted by 5,000+ Traders</div>
-            <div class="trust-item">✓ Daily Consistent Setups</div>
+            <div class="trust-item">
+                🇮🇳 Trusted by 5,000+ Traders
+            </div>
         </div>
 
         <div class="features-list">
-            <div class="feature-item">✓ 5-7 High Probability Trades</div>
-            <div class="feature-item">✓ Exact Entry, SL & Target</div>
-            <div class="feature-item">✓ Beginner Friendly Guidance</div>
-            <div class="feature-item">✓ Live Market Updates</div>
+
+            <div class="feature-item">
+                ✓ 5-7 High Probability Trades
+            </div>
+
+            <div class="feature-item">
+                ✓ Exact Entry, SL & Target
+            </div>
+
+            <div class="feature-item">
+                ✓ Beginner Friendly Guidance
+            </div>
+
+            <div class="feature-item">
+                ✓ Live Market Updates
+            </div>
+
         </div>
 
-        <a href="https://t.me/+JRm7zWfdBN4wMmE1" class="btn-telegram" target="_blank">
+        <a href="https://t.me/+JRm7zWfdBN4wMmE1"
+           class="btn-telegram"
+           target="_blank">
             🚀 Join Free Telegram Channel
         </a>
 
-        <div class="urgency-text">⏳ Free Access Closing Soon</div>
-        <div class="community-text">📈 Limited Seats • Active Community</div>
-        <div class="disclaimer">⚠️ Market investments are subject to risk</div>
+        <div class="urgency-text">
+            ⏳ Free Access Closing Soon
+        </div>
+
+        <div class="community-text">
+            📈 Limited Seats • Active Community
+        </div>
+
+        <div class="disclaimer">
+            ⚠️ Market investments are subject to risk
+        </div>
+
     </div>
 
 </body>
