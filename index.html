@@ -6,6 +6,24 @@
 
 <title>ZERO TO HERO TRADING</title>
 
+<!-- Meta Pixel Code -->
+<script>
+!function(f,b,e,v,n,t,s)
+{if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+n.queue=[];t=b.createElement(e);t.async=!0;
+t.src=v;s=b.getElementsByTagName(e)[0];
+s.parentNode.insertBefore(t,s)}(window, document,'script',
+'https://connect.facebook.net/en_US/fbevents.js');
+fbq('init', '2628506570942980');
+fbq('track', 'PageView');
+</script>
+<noscript><img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2628506570942980&ev=PageView&noscript=1"
+/></noscript>
+<!-- End Meta Pixel Code -->
+
 <style>
 *{
     margin:0;
@@ -198,53 +216,43 @@ body{
 
 /* SMALL MOBILE */
 @media(max-width:380px){
-
     .page{
         padding:45px 24px 30px;
     }
-
     .logo{
         width:54px;
         height:54px;
         margin-bottom:26px;
     }
-
     .title{
         font-size:25px;
         margin-bottom:30px;
     }
-
     .features{
         gap:15px;
         margin-bottom:30px;
     }
-
     .feature{
         font-size:13px;
         gap:13px;
     }
-
     .icon{
         width:42px;
         height:42px;
         min-width:42px;
         font-size:16px;
     }
-
     .timer-row{
         margin-bottom:21px;
     }
-
     .telegram-btn{
         height:56px;
         font-size:15px;
     }
-
     .subscribers{
         font-size:12px;
         margin-top:15px;
     }
-
     .disclaimer{
         font-size:9px;
         margin-top:26px;
@@ -269,39 +277,31 @@ body{
 
     <!-- FEATURES -->
     <div class="features">
-
         <div class="feature">
             <div class="icon">▥</div>
             <span>Daily Intraday Calls</span>
         </div>
-
         <div class="feature">
-            <div class="icon">↗</div>
+            <div class="icon">↗️</div>
             <span>Swing Trading Ideas</span>
         </div>
-
         <div class="feature">
             <div class="icon">◎</div>
             <span>Entry &amp; Exit Levels</span>
         </div>
-
         <div class="feature">
             <div class="icon">♢</div>
             <span>Risk Management</span>
         </div>
-
     </div>
 
     <!-- TIMER -->
     <div class="timer-row">
-
         <div class="progress-container">
             <div class="progress-bar" id="progressBar"></div>
             <div class="progress-dot" id="progressDot"></div>
         </div>
-
         <div class="timer" id="timer">00:55</div>
-
     </div>
 
     <!-- TELEGRAM -->
@@ -309,11 +309,11 @@ body{
         href="https://t.me/+5jVZmaHzLbplZjM1"
         class="telegram-btn"
         target="_blank"
-        rel="noopener noreferrer">
+        rel="noopener noreferrer"
+        onclick="fbq('track', 'Lead');">
 
         <span class="telegram-icon">➤</span>
         <span>Join Telegram</span>
-
     </a>
 
     <!-- SUBSCRIBERS -->
@@ -330,7 +330,6 @@ body{
 </div>
 
 <script>
-
 let timeLeft = 55;
 const totalTime = 55;
 
@@ -339,39 +338,23 @@ const progressBar = document.getElementById("progressBar");
 const progressDot = document.getElementById("progressDot");
 
 function updateTimer(){
-
-    timer.textContent =
-        "00:" + String(timeLeft).padStart(2,"0");
-
-    const percentage =
-        (timeLeft / totalTime) * 100;
-
-    progressBar.style.width =
-        percentage + "%";
-
-    progressDot.style.right =
-        (100 - percentage) + "%";
+    timer.textContent = "00:" + String(timeLeft).padStart(2,"0");
+    const percentage = (timeLeft / totalTime) * 100;
+    progressBar.style.width = percentage + "%";
+    progressDot.style.right = (100 - percentage) + "%";
 
     if(timeLeft <= 0){
-
         clearInterval(countdown);
-
         timer.textContent = "00:00";
-
         progressBar.style.width = "0%";
-
         progressDot.style.right = "100%";
-
         return;
     }
-
     timeLeft--;
 }
 
 updateTimer();
-
 const countdown = setInterval(updateTimer,1000);
-
 </script>
 
 </body>
