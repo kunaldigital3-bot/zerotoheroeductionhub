@@ -6,7 +6,7 @@
 
 <title>ZERO TO HERO TRADING</title>
 
-<!-- Meta Pixel Code -->
+<!-- Meta Pixel Code: Single Pixel -->
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -16,12 +16,16 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', '2628506570942980');
+
+fbq('init', '2536383413541087');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=2628506570942980&ev=PageView&noscript=1"
-/></noscript>
+
+<noscript>
+<img height="1" width="1" style="display:none"
+src="https://www.facebook.com/tr?id=2536383413541087&ev=PageView&noscript=1"
+alt="">
+</noscript>
 <!-- End Meta Pixel Code -->
 
 <style>
@@ -157,6 +161,7 @@ body{
     box-shadow:0 0 0 4px rgba(177,137,34,.13);
 }
 
+/* TIMER TEXT */
 .timer{
     min-width:48px;
     color:#17283c;
@@ -308,9 +313,9 @@ body{
     <a
         href="https://t.me/+5jVZmaHzLbplZjM1"
         class="telegram-btn"
+        id="telegramButton"
         target="_blank"
-        rel="noopener noreferrer"
-        onclick="fbq('track', 'Lead');">
+        rel="noopener noreferrer">
 
         <span class="telegram-icon">➤</span>
         <span>Join Telegram</span>
@@ -330,6 +335,7 @@ body{
 </div>
 
 <script>
+/* Countdown timer */
 let timeLeft = 55;
 const totalTime = 55;
 
@@ -339,7 +345,9 @@ const progressDot = document.getElementById("progressDot");
 
 function updateTimer(){
     timer.textContent = "00:" + String(timeLeft).padStart(2,"0");
+
     const percentage = (timeLeft / totalTime) * 100;
+
     progressBar.style.width = percentage + "%";
     progressDot.style.right = (100 - percentage) + "%";
 
@@ -350,11 +358,21 @@ function updateTimer(){
         progressDot.style.right = "100%";
         return;
     }
+
     timeLeft--;
 }
 
 updateTimer();
 const countdown = setInterval(updateTimer,1000);
+
+/* Meta Pixel: Telegram button click tracking */
+const telegramButton = document.getElementById("telegramButton");
+
+telegramButton.addEventListener("click", function(){
+    if(typeof window.fbq === "function"){
+        fbq('track', 'Lead');
+    }
+});
 </script>
 
 </body>
